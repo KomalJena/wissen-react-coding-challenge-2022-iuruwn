@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { render } from 'react-dom';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Hello from './Hello';
 import './style.css';
 
 const App = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // const history = useHistory();
+  // const history = useNavigate();
   useEffect(() => {
     if (localStorage.getItem('user-info')) {
+      // history('./Hello');
     }
   });
   async function login() {
